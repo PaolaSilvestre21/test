@@ -5,7 +5,7 @@
 
 ## Instrucciones
 
-### 1. Clonar el repositorio ejcuta rlocal
+### 1. Clonar el repositorio ejecutar local
 
 Primero, clona este repositorio en tu máquina local:
 
@@ -15,5 +15,5 @@ cd tu-repositorio
 cd list 
 ng serve
 
-### 2 . Docker
+### 2. Docker              
 docker-compose up --build
