@@ -1,0 +1,9 @@
+version: '1.1'
+
+services:
+  angular-testing:
+    build: .
+    ports:
+      - "80:80"
+    container_name: angular-testing
+    restart: unless-stopped

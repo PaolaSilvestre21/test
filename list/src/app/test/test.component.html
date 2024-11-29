@@ -1,0 +1,38 @@
+<div class="test2">
+  <h1>Tarea Testing</h1>
+  
+  <div class="container">
+    <input
+      type="text"
+      placeholder="Agregar tarea"
+      [(ngModel)]="newta"
+      (keyup.enter)="add()"
+    />
+  </div>
+  
+  <div class="preview-box">
+    <p>Tarea agregada: <strong>{{ save }}</strong></p>
+    <button class="close-btn" (click)="clear()">×</button>
+  </div>
+
+  <ul class="test-lista">
+    <li *ngFor="let todo of filtro">
+      <input
+        type="checkbox"
+        [(ngModel)]="todo.completed"
+        (change)="update()"
+      />
+      <span [class.completed]="todo.completed">{{ todo.title }}</span>
+    </li>
+  </ul>
+
+  <div class="footer">
+    <span>{{ pendientes }} tareas pendientes</span>
+    <div class="filtros">
+      <button (click)="filter('todos')">Todas las tareas</button>
+      <button (click)="filter('activo')">Tareas activas</button>
+      <button (click)="filter('completado')">Tareas completadas</button>
+    </div>
+    <button (click)="clear()">Limpiar</button>
+  </div>
+</div>
